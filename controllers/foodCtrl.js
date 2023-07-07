@@ -13,7 +13,7 @@ export const showFoods = (req, res) => {
       console.log(err);
       res.status(404).send(err);
     } else {
-      res.status(200).json(results);
+      res.status(200).json({ results: results, user: req.user });
     }
   });
 };
